@@ -12,6 +12,10 @@ add_executable(e1 src/example_1.cpp)
 target_link_libraries(e1 PRIVATE protolib::protolib)
 
 #including ROOT
-find_package(ROOT 6.16 CONFIG REQUIRED)
-add_executable(e2 src/root_example.cpp )
-target_link_libraries(e2 PRIVATE ROOT::Hist ROOT::Core ROOT::Gpad ROOT::Rint protolib::protolib)
+find_package(ROOT 6.18 CONFIG REQUIRED)
+add_executable(root_example src/root_example.cpp )
+target_link_libraries(root_example PRIVATE ROOT::Hist ROOT::Core ROOT::Gpad ROOT::Rint protolib::protolib)
+
+
+add_executable(myten_scurve src/mythen_scurve.cpp )
+target_link_libraries(myten_scurve PRIVATE ROOT::Hist ROOT::Core ROOT::Gpad ROOT::Rint protolib::protolib)

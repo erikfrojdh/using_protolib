@@ -11,7 +11,7 @@ int main(int argc, char** argv)
     auto c1 = new TCanvas("c1", "Canvas", 10, 10, 900, 500);
     auto h = new TH1F("h", "test", 100, 0, 5000);
 
-    pl::File f("/Users/erik/data/protolib_test/jungfrau/run_master_0.raw");
+    pl::File f("/home/l_frojdh/data/protolib_test/jungfrau/run_master_0.raw");
     auto img = f.read_as<uint16_t>();
     for (auto pixel : img)
         h->Fill(pixel);
@@ -23,6 +23,5 @@ int main(int argc, char** argv)
     c1->SetGrid();
     h->Draw();
     c1->Update();
-
     app.Run();
 }
