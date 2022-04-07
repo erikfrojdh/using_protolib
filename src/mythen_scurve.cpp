@@ -24,7 +24,7 @@ int main(int argc, char** argv)
 
     for (size_t i=0; i!=n; ++i){
         auto img = f.read_as<uint32_t>();
-        y[i] = std::accumulate(img.begin(), img.end(), 0UL);
+        y[i] = std::accumulate(img.begin(), img.end(), 0UL); //sum all channels
         x[i] = i;
     }
 
