@@ -19,3 +19,7 @@ target_link_libraries(root_example PRIVATE ROOT::Hist ROOT::Core ROOT::Gpad ROOT
 
 add_executable(myten_scurve src/mythen_scurve.cpp )
 target_link_libraries(myten_scurve PRIVATE ROOT::Hist ROOT::Core ROOT::Gpad ROOT::Rint protolib::protolib)
+
+
+add_executable(m3_fit src/m3_fit.cpp )
+target_link_libraries(m3_fit PRIVATE ROOT::Hist ROOT::Core ROOT::Gpad ROOT::Rint protolib::protolib)
